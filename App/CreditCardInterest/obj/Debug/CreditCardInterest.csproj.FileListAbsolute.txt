@@ -1,0 +1,6 @@
+c:\users\agastya\documents\visual studio 2013\Projects\CreditCardInterest\CreditCardInterest\bin\Debug\CreditCardInterest.exe.config
+C:\Users\Agastya\Documents\Visual Studio 2013\Projects\CreditCardInterest\CreditCardInterest\obj\Debug\CreditCardInterest.csprojResolveAssemblyReference.cache
+C:\Users\Agastya\Documents\Visual Studio 2013\Projects\CreditCardInterest\CreditCardInterest\bin\Debug\CreditCardInterest.exe
+C:\Users\Agastya\Documents\Visual Studio 2013\Projects\CreditCardInterest\CreditCardInterest\bin\Debug\CreditCardInterest.pdb
+C:\Users\Agastya\Documents\Visual Studio 2013\Projects\CreditCardInterest\CreditCardInterest\obj\Debug\CreditCardInterest.exe
+C:\Users\Agastya\Documents\Visual Studio 2013\Projects\CreditCardInterest\CreditCardInterest\obj\Debug\CreditCardInterest.pdb
