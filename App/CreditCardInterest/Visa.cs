@@ -6,24 +6,40 @@ using System.Threading.Tasks;
 
 namespace CreditCardInterest
 {
-    class Visa//:CreditCard
+    public class Visa : CreditCards
     {
-        //private static double interestRate = 0.1;
-        //public override void setInterest(double interestRate)
-        //{
-        //    base.setInterest(interestRate);
-        //}
-        //public override double getInterest()
-        //{
-        //    return base.getInterest();
-        //}
-        //public override void setBalance(double balance)
-        //{
-        //    base.setBalance(balance);
-        //}
-        //public override double getBalance()
-        //{
-        //    return base.getBalance();
-        //}
+        private static readonly double interestRate = 0.10;
+        private double interest;
+        private double balance;
+
+        public Visa (double balance)
+        {
+            setBalance(balance);
+            setInterest();
+        }
+        public double getInterest()
+        {
+            return this.interest;
+        }
+
+        public void setInterest()
+        {
+            this.interest = this.balance * interestRate;
+        }
+
+        public double getBalance()
+        {
+            return this.balance;
+        }
+
+        public void setBalance(double balance)
+        {
+            this.balance = balance;
+        }
+
+        public double getInterestRate()
+        {
+            return interestRate;
+        }
     }
 }

@@ -8,17 +8,13 @@ namespace CreditCardInterest
 {
     public class Persons 
     {
-       // public Wallet[] wallet;
-        public double interest=0;
+        private double interest=0;
         public Persons(Wallet[] wallet)
         {
-            calInterest(wallet);
+            calPersonInterest(wallet);
         }
-        //public void addWallet(Wallet[] wallet)
-        //{
-        //    this.wallet = wallet;
-        //}
-        public void calInterest(Wallet[] wallet)
+        
+        public void calPersonInterest(Wallet[] wallet)
         {
             for (int i = 0; i < wallet.Length; i++)
             {

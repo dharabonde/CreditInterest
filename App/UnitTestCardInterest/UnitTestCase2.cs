@@ -7,15 +7,16 @@ namespace UnitTestCardInterest
 {
     [TestClass]
     public class UnitTestCase2
-    {
-        CreditCardInterest.CreditCard card1 = new CreditCardInterest.CreditCard(100, 0.01, "Discover");
-        CreditCardInterest.CreditCard card2 = new CreditCardInterest.CreditCard(100, 0.1, "Visa");
-        CreditCardInterest.CreditCard card3 = new CreditCardInterest.CreditCard(100, 0.05, "MasterCard");
+    {        
+        private CreditCardInterest.DiscoverCard discover = new CreditCardInterest.DiscoverCard(100);
+        private CreditCardInterest.Visa visa = new CreditCardInterest.Visa(100);
+        private CreditCardInterest.MasterCard masterCard = new CreditCardInterest.MasterCard(100);                                                   
+        
         [TestMethod]
         public void TestPersonInterest()
         {
-            CreditCardInterest.CreditCard[] cardArr1 = { card1, card2};
-            CreditCardInterest.CreditCard[] cardArr2 = { card3};
+            CreditCardInterest.CreditCards[] cardArr1 = { discover, visa };
+            CreditCardInterest.CreditCards[] cardArr2 = { masterCard };
 
             CreditCardInterest.Wallet wallet1 = new CreditCardInterest.Wallet(cardArr1);
             CreditCardInterest.Wallet wallet2 = new CreditCardInterest.Wallet(cardArr2);
@@ -29,7 +30,7 @@ namespace UnitTestCardInterest
         [TestMethod]
         public void TestWallet_1_Interest()
         {
-            CreditCardInterest.CreditCard[] cardArr = { card1, card2 };
+            CreditCardInterest.CreditCards[] cardArr = { discover, visa };
             CreditCardInterest.Wallet wallet = new CreditCardInterest.Wallet(cardArr);
             Assert.AreEqual(11.0, wallet.getWalletInterest());
         }
@@ -37,7 +38,7 @@ namespace UnitTestCardInterest
         [TestMethod]
         public void TestWallet_2_Interest()
         {
-            CreditCardInterest.CreditCard[] cardArr = { card3};
+            CreditCardInterest.CreditCards[] cardArr = { masterCard};
             CreditCardInterest.Wallet wallet = new CreditCardInterest.Wallet(cardArr);
             Assert.AreEqual(5.0, wallet.getWalletInterest());
         }

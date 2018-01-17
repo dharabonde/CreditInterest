@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreditCard.cs" />
+    <Compile Include="CreditCards.cs" />
     <Compile Include="DiscoverCard.cs" />
     <Compile Include="MasterCard.cs" />
     <Compile Include="Persons.cs" />

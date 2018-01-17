@@ -7,52 +7,39 @@ using System.Threading.Tasks;
 
 namespace CreditCardInterest
 {
-    class DiscoverCard //: CreditCard
+    public class DiscoverCard : CreditCards
     {
-       // public DiscoverCard(double balance, double interestRate, string cardName):base(balance, interestRate, cardName)
-       // {
+        private static readonly double interestRate=0.01;
+        private double balance;
+        private double interest;
+        public DiscoverCard(double balance)
+        {
+            setBalance(balance);
+            setInterest();           
+        }
+        public double getInterest()
+        {
+            return this.interest;
+        }
 
-       // }
-       // private static double interestRate = 0.01;
-       // public override void setInterest(double interestRate)
-       // {
-       //     base.setInterest(interestRate);
-       // }
-       // public override double getInterest()
-       // {
-       //     return base.getInterest();
-       // }
-       // public override void setBalance(double balance)
-       // {
-       //     base.setBalance(balance);
-       // }
-       // public override double getBalance()
-       // {
-       //     return base.getBalance();
-       // }
-       ///* private double interest;
-       // private double balance;
+        public void setInterest()
+        {
+            this.interest = this.balance * interestRate;
+        }
 
-       // public void Discover(double balance)
-       // {
-       //     setBalance(balance);
-       //     setInterest();
-       // }
-       // public override void setInterest()
-       // {
-       //     this.interest = balance * interestRate;
-       // }
-       // public override double getInterest()
-       // {
-       //     return this.interest;
-       // }
-       // public override void setBalance(double balance)
-       // {
-       //     this.balance = balance;
-       // }
-       // public override double getBalance()
-       // {
-       //     return this.balance;
-       // }*/
-    }
+        public double getBalance()
+        {
+            return this.balance;
+        }
+
+        public void setBalance(double balance)
+        {
+            this.balance = balance;
+        }
+
+        public double getInterestRate()
+        {
+            return interestRate;
+        }
+    }        
 }
