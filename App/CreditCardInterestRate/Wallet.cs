@@ -4,20 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-
-namespace CreditCardInterest
+namespace CreditCardInterestRate
 {
     public class Wallet
     {
-        private double interest=0;
-        
+        private double interest = 0;
+
         public Wallet(CreditCards[] card)
         {
             calWalletInterest(card);
-        }     
-   
+        }
+
         public void calWalletInterest(CreditCards[] card)
         {
             for (int i = 0; i < card.Length; i++)

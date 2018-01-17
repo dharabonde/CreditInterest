@@ -1,0 +1,1 @@
+c:\users\agastya\documents\visual studio 2013\Projects\CreditCardInterestRate\UnitTestCase1\obj\Debug\UnitTestCase1.csprojResolveAssemblyReference.cache

@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D98D20A1-4313-40B7-AD88-EBFAE1D0CF8B}</ProjectGuid>
+    <ProjectGuid>{42E51D30-D66F-4049-86E6-601CBC803B6F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestCardInterest</RootNamespace>
-    <AssemblyName>UnitTestCardInterest</AssemblyName>
+    <RootNamespace>UnitTestCase1</RootNamespace>
+    <AssemblyName>UnitTestCase1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,16 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTestCase3.cs" />
-    <Compile Include="UnitTestCase2.cs" />
-    <Compile Include="UnitTestCase1.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CreditCardInterestRate\CreditCardInterestRate.csproj">
-      <Project>{c7291b1b-e354-4537-9b29-c6829b1c7126}</Project>
-      <Name>CreditCardInterestRate</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

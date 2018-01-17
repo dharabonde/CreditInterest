@@ -1,28 +1,27 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CreditCardInterestRate;
 
 namespace UnitTestCardInterest
 {
     [TestClass]
     public class UnitTestCase2
-    {        
-        private CreditCardInterest.DiscoverCard discover = new CreditCardInterest.DiscoverCard(100);
-        private CreditCardInterest.Visa visa = new CreditCardInterest.Visa(100);
-        private CreditCardInterest.MasterCard masterCard = new CreditCardInterest.MasterCard(100);                                                   
-        
+    {
+        private CreditCardInterestRate.DiscoverCard discover = new CreditCardInterestRate.DiscoverCard(100);
+        private CreditCardInterestRate.Visa visa = new CreditCardInterestRate.Visa(100);
+        private CreditCardInterestRate.MasterCard masterCard = new CreditCardInterestRate.MasterCard(100);
+
         [TestMethod]
         public void TestPersonInterest()
         {
-            CreditCardInterest.CreditCards[] cardArr1 = { discover, visa };
-            CreditCardInterest.CreditCards[] cardArr2 = { masterCard };
+            CreditCardInterestRate.CreditCards[] cardArr1 = { discover, visa };
+            CreditCardInterestRate.CreditCards[] cardArr2 = { masterCard };
 
-            CreditCardInterest.Wallet wallet1 = new CreditCardInterest.Wallet(cardArr1);
-            CreditCardInterest.Wallet wallet2 = new CreditCardInterest.Wallet(cardArr2);
-            CreditCardInterest.Wallet[] walArr = { wallet1, wallet2 };
+            CreditCardInterestRate.Wallet wallet1 = new CreditCardInterestRate.Wallet(cardArr1);
+            CreditCardInterestRate.Wallet wallet2 = new CreditCardInterestRate.Wallet(cardArr2);
+            CreditCardInterestRate.Wallet[] walArr = { wallet1, wallet2 };
 
-            CreditCardInterest.Persons person = new CreditCardInterest.Persons(walArr);
+            CreditCardInterestRate.Persons person = new CreditCardInterestRate.Persons(walArr);
 
             Assert.AreEqual(16, person.getPersonInterest());
         }
@@ -30,16 +29,16 @@ namespace UnitTestCardInterest
         [TestMethod]
         public void TestWallet_1_Interest()
         {
-            CreditCardInterest.CreditCards[] cardArr = { discover, visa };
-            CreditCardInterest.Wallet wallet = new CreditCardInterest.Wallet(cardArr);
+            CreditCardInterestRate.CreditCards[] cardArr = { discover, visa };
+            CreditCardInterestRate.Wallet wallet = new CreditCardInterestRate.Wallet(cardArr);
             Assert.AreEqual(11.0, wallet.getWalletInterest());
         }
 
         [TestMethod]
         public void TestWallet_2_Interest()
         {
-            CreditCardInterest.CreditCards[] cardArr = { masterCard};
-            CreditCardInterest.Wallet wallet = new CreditCardInterest.Wallet(cardArr);
+            CreditCardInterestRate.CreditCards[] cardArr = { masterCard };
+            CreditCardInterestRate.Wallet wallet = new CreditCardInterestRate.Wallet(cardArr);
             Assert.AreEqual(5.0, wallet.getWalletInterest());
         }
     }

@@ -1,24 +1,23 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CreditCardInterestRate;
 
-namespace UnitTestCardInterest
+namespace UnitTestCase1
 {
     [TestClass]
-    public class UnitTestCase1
+    public class UnitTest1
     {
         private CreditCardInterestRate.DiscoverCard discover = new CreditCardInterestRate.DiscoverCard(100);
-        private CreditCardInterestRate.Visa visa = new CreditCardInterestRate.Visa(100);
-        private CreditCardInterestRate.MasterCard masterCard = new CreditCardInterestRate.MasterCard(100);
+        private CreditCardInterest.Visa visa = new CreditCardInterest.Visa(100);
+        private CreditCardInterest.MasterCard masterCard = new CreditCardInterest.MasterCard(100);
 
         [TestMethod]
         public void TestPersonInterest()
         {
-            CreditCardInterestRate.CreditCards[] cards = { discover, visa, masterCard };
-            CreditCardInterestRate.Wallet wallet = new CreditCardInterestRate.Wallet(cards);
-            CreditCardInterestRate.Wallet[] walArr = { wallet };
+            CreditCardInterest.CreditCards[] cards = { discover, visa, masterCard };
+            CreditCardInterest.Wallet wallet = new CreditCardInterest.Wallet(cards);
+            CreditCardInterest.Wallet[] walArr = { wallet };
 
-            CreditCardInterestRate.Persons person = new CreditCardInterestRate.Persons(walArr);
+            CreditCardInterest.Persons person = new CreditCardInterest.Persons(walArr);
 
             Assert.AreEqual(16.0, person.getPersonInterest());
         }

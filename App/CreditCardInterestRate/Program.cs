@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreditCardInterest
+namespace CreditCardInterestRate
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DiscoverCard discover=new DiscoverCard(100);
+            DiscoverCard discover = new DiscoverCard(100);
             Visa visa = new Visa(100);
             MasterCard masterCard = new MasterCard(100);
 
@@ -25,5 +25,3 @@ namespace CreditCardInterest
         }
     }
 }
-
-

@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreditCardInterest
+namespace CreditCardInterestRate
 {
-    public class Visa : CreditCards
+    public class DiscoverCard : CreditCards
     {
-        private static readonly double interestRate = 0.10;
-        private double interest;
+        private static readonly double interestRate = 0.01;
         private double balance;
-
-        public Visa (double balance)
+        private double interest;
+        public DiscoverCard(double balance)
         {
             setBalance(balance);
             setInterest();
@@ -41,5 +40,5 @@ namespace CreditCardInterest
         {
             return interestRate;
         }
-    }
+    }        
 }
